@@ -10,8 +10,10 @@ class Person
     @bank_account = 25
     @happiness = 8
     @hygiene = 8
-    # @friend_happiness = 8
+  end
 
+  def bank_account=(bank_account)
+    @bank_account = bank_account
   end
 
 
@@ -22,6 +24,9 @@ class Person
   def hygiene=(hygiene)
     @hygiene = hygiene
   end
+
+# The happiness and hygiene points should be able to change, however the maximum and
+# minimum points for both happiness and hygiene should be 10 and 0 respectively
 
   def happiness
     if @happiness > 10
