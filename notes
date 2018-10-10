@@ -1,0 +1,77 @@
+# # your code goes here
+#
+# class Person
+#   puts self
+#   #attr_reader red only
+#   #attr_writer set instance variable, so its writable
+#   #attr_accessor
+#   #makes a read-only attribute for name, so
+#   attr_reader :name
+#   #already set values only need a writer now
+#   attr_writer :bank_account, :happiness, :hygiene
+#
+#
+#   def initialize(name)
+#     @name=(name)
+#     @bank_account=25
+#     @happiness=8
+#     @hygiene = 8
+#   end
+# end
+#
+#
+# cat = Person.new('vera' )
+# puts cat
+#
+# cat.name
+# cat.name = 'fluffy'
+
+#person name cant be changed
+#
+
+class Person
+
+  attr_reader :name #can't change name
+
+  def initialize(name)
+    @name = name
+    @happiness = 8
+    @hygiene = 8
+    @bank_account = 25
+  end
+
+  def bank_account=(bank_account)
+    @bank_account = bank_accountlear
+  end
+end
+  #def name
+  #  @name #returns name (instance variable access in scope of person class)
+  #end
+
+  #@name = 'vera'
+  #def name=(name) #setter; passes parameter (name)
+  #  @name = name
+  #end
+  # num = 0
+  # def multiply(a, b)
+  #   num = a*b
+  # end
+
+
+
+
+# vera  = Person.new('vera')
+# puts vera.name
+# # => vera
+# leslie = Person.new('leslie')
+#
+# puts leslie.name
+# # => leslie
+# leslie.name = 'LESLIE'
+# puts leslie.name
+# # => LESLIE
+#
+# num = 0
+# def multiply(a, b)
+#   num = a*b
+# end
