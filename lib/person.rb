@@ -1,7 +1,9 @@
 class Person
 
-  attr_accessor :bank_account, :happiness, :hygiene
-  attr_reader :name
+  attr_accessor :bank_account
+  attr_reader :name, :happiness, :hygiene
+  # :name = will not be resetting persons name
+  # :happiness/:hygiene = we need to customize how they will be SET (so require custom setter)
 
   def initialize(name)
     @name = name
@@ -14,19 +16,19 @@ class Person
     @name
   end
 
-  #why doesn't this work without using a custom setter def???
+  #MUST use custom setter - b/c they are 'conditionally' set, 
   def hygiene=(hygiene)
     @hygiene = hygiene
 
     if @hygiene >= 10
       @hygiene = 10
-      
+
     elsif @hygiene <= 0
       @hygiene = 0
     end
   end
 
-#is there a less 'smelly' way to write this?
+
   def happiness=(happiness)
     @happiness = happiness
 
